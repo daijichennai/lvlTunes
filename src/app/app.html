@@ -1,0 +1,20 @@
+<!--Side Menu with avatar-->
+<ion-menu [content]="content" id="menu-avatar">
+  <ion-content>
+    <div #header>
+      <ion-row style="justify-content: center;">
+        <h3>LVL Tunes</h3>
+      </ion-row>
+      <div style="height: 3vw"></div>
+      <div class="menu-user-image" style="background-image: url('../assets/imgs/lvlLogo.png');"></div>
+      <div style="height: 3vw"></div>
+    </div>
+    <ion-list no-lines>
+      <button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">
+        <i class="{{p.icon}} fa-1x"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{p.title}}<i class="fa fa-angle-right" item-right></i>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

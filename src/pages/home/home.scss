@@ -1,0 +1,33 @@
+page-home {
+
+    // ion-card {
+    //    width: 60%;
+    // }
+   #carousel {
+        padding: 12px;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        white-space:nowrap;
+    }
+
+#carousel .slide {
+    display: inline-block; 
+}
+
+ 
+    .scroll-zoom-wrapper {
+        white-space: nowrap;
+    }
+ 
+
+    ion-scroll {
+        min-height: 200px; 
+        height: auto;
+
+            .scroll-content {
+            padding: 0px !important;
+        }    
+    }
+ 
+}
