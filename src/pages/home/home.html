@@ -11,8 +11,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <span ion-text color="primary">
-    LVL Tunes
-  </span>
+ 
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let i of jsonItems">
+    <img src="http://lvltunes.daijiworld.com/images/album/{{i.albumImageName}}" />
+    <div class="card-title">{{i.albumName}}</div>
+    <!-- <div class="card-subtitle">41 Listings</div> -->
+  </ion-card>
+ 
 </ion-content>
+ 

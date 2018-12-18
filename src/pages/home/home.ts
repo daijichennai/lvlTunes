@@ -8,6 +8,7 @@ import { GlobalFuncProvider } from '../../providers/global-func/global-func';
 })
 export class HomePage {
   public domainUrl: string = "";
+  public jsonItems: any;
 
   constructor(
     public navCtrl: NavController,
@@ -20,10 +21,12 @@ export class HomePage {
   }
 
   getAlbumJson() {
+    
     let url = this.domainUrl + "json/albumList.ashx";
     this.globalFunc.getJson(url).subscribe(
-      data => console.log(data)
-    );
+      response => 
+        this.jsonItems = response  
+      );
   }
    
 

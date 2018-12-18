@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class GlobalFuncProvider {
@@ -14,7 +15,9 @@ export class GlobalFuncProvider {
   }
 
   getJson(url: string) {
-    return this.http.get(url);
+    let data: Observable<any>;
+    data = this.http.get(url);
+    return data;
     // .do(res=>console.log(res));
   }
 
